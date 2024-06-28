@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/room")
 public class RoomController {
@@ -17,7 +18,6 @@ public class RoomController {
     @Autowired
     private RoomService roomService;
 
-    @CrossOrigin(origins = "https://app-oasis-angular.web.app")
     @GetMapping("/all")
     public ResponseEntity<List<Room>> getAllRooms()
     {
